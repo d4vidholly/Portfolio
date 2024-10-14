@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    color: #333;
   }
   
   body {
@@ -10,7 +11,7 @@
   }
   
   .hero {
-    background-color: #fff;
+    color: #333;
     padding: 2rem;
     text-align: center;
   }
@@ -26,10 +27,23 @@
     font-size: 2rem;
     margin-bottom: 1rem;
   }
+
+  .hero h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
   
   .hero p {
     font-size: 1rem;
-    color: #666;
+    color: #333;
+  }
+
+  .hero-wrapper {
+    background-color: #f1f1f1;
+    padding: 1rem;
+    border-radius: 5px;
+    max-width: 600px;
+    margin: auto;
   }
 
   p {
@@ -82,7 +96,7 @@
   }
   
   .cta {
-    background-color: black;
+    background-color: #333;
     color: #fff;
     padding: 0.5rem 1rem;
     text-decoration: none;
@@ -112,6 +126,10 @@
     text-decoration: underline;
   }
 
+  .foot   {
+    color: white;
+  }
+
   @media (min-width: 768px) {
     .project {
       flex-direction: row; /* Change to row for desktop */
@@ -139,3 +157,45 @@
       font-size: 1.8rem; /* Larger font size for titles */
     }
   }
+
+  .what-ive-been-up-to {
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+}
+
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Space between posts */
+}
+
+.post {
+    flex: 1 1 300px; /* Minimum width of 300px */
+    max-width: 300px; /* Maximum width */
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: left; /* Align text to the left */
+}
+
+.post img {
+    width: 100%; /* Responsive image */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.post p {
+    padding: 10px;
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    .posts {
+        flex-direction: column; /* Stack posts on mobile */
+        align-items: center; /* Center align */
+    }
+}
