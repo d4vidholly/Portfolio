@@ -50,6 +50,10 @@
     margin-bottom: 1rem;
   }
   
+.desktop    {
+    display: none;
+}
+
   .portfolio {
     display: flex;
     flex-direction: column;
@@ -145,6 +149,14 @@
     .project-info {
       width: 45%; /* Adjust width for project info */
       text-align: left; /* Left align text on larger screens */
+    }
+
+    .mobile {
+        display: none;
+    }
+
+    .desktop    {
+        display: block;
     }
   }
   
