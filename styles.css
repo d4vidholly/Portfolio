@@ -91,6 +91,11 @@
     aspect-ratio: 16 / 9;
     border-radius: 10px;
   }
+
+  .thumbnail:hover {
+    transform: scale(1.02);
+    transition: ease-in-out;
+  }
   
   
   
