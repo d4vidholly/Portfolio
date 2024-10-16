@@ -54,7 +54,11 @@
     display: none;
 }
 
+.lead {
 
+  text-align: center;
+  margin: auto;
+}
 
   .portfolio {
     display: flex;
