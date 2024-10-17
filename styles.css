@@ -81,6 +81,7 @@
 
   .project-video    {
     width: 100%;
+    text-align: center;
   }
 
   .rounded  {
@@ -101,10 +102,10 @@
     border-radius: 10px;
   }
 
-  .thumbnail:hover {
-    transform: scale(1.02);
-    transition: ease-in-out;
-  }
+.spacer {
+  width: 100%;;
+  height: 30px;
+}
   
   
   
