@@ -8,6 +8,7 @@
   body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
+
   }
   
   .hero {
@@ -78,6 +79,45 @@
     margin: 1rem 0;
   }
   
+  .hero {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 2s ease forwards;
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .project {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 1.5s; /* optional delay */
+  }
+  
+  /* Define the keyframes for the fade-in */
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+
+  .lead {
+    opacity: 0;
+    animation: fadeIn 1s ease-in-out forwards;
+    animation-delay: 1s; /* optional delay */
+  }
+  
+  /* Define the keyframes for the fade-in */
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+    }
+  }
+
 
   .project-video    {
     width: 100%;
@@ -107,7 +147,7 @@
   height: 30px;
 }
   
-  
+
   
   .project h2 {
     font-size: 1.5rem;
@@ -124,16 +164,21 @@
   }
   
   .cta {
-    background-color: #333;
-    color: #fff;
-    padding: 0.5rem 1rem;
+
+    color: #252525;
+    font-size: larger;
+    padding: 1rem 2rem;
     text-decoration: none;
-    border-radius: 5px;
+    border-radius: 30px;
     transition: background-color 0.3s ease;
+    border: solid 2px #252525;
+    font-weight: 600;
   }
   
   .cta:hover {
-    background-color: #555;
+    background: linear-gradient(-45deg, #ff5ce1, #53DFF2);
+    color: white;
+    border-color: white;
   }
   
   footer {
