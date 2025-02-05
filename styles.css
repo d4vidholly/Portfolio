@@ -129,6 +129,20 @@
     }
   }
 
+  .roles  {
+    font-size: smaller;
+    min-width: 125px;
+    text-align: center;
+    color: #f1f1f1;
+    background-color: #252525;
+    border-radius: 50px
+  }
+
+  .roles-wrapper  {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
 
   .project-video    {
     width: 100%;
@@ -152,6 +166,8 @@
     aspect-ratio: 16 / 9;
     border-radius: 5px;
   }
+
+  
 
 .spacer {
   width: 100%;;
