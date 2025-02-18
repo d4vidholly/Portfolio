@@ -2,8 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: #f1f1f1;
-    font-family: Lato, sans-serif;
+    font-family: Inter, sans-serif;
   }
   
   .lato-regular {
@@ -15,22 +14,24 @@
   body {
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color: #252525;
+    background-color: #333333;
 
   }
   
   .hero {
-    color: #f1f1f1;
+    color: #ebebeb;
     padding: 2rem;
     text-align: center;
+    height: 100vh;
+  }
+
+  .quote-three  {
+    opacity: 50%;
   }
   
   .hero-photo {
     width: 150px;
-    height: 150px;
-    border-radius: 50%;
     margin-bottom: 1rem;
-    border: solid white 1px;
     z-index: 999;
   }
   
@@ -49,12 +50,13 @@
   }
 
   .hero-wrapper {
-    background-color: #363636;
-    color: #f1f1f1;
+    background-color: #ebebeb;
+    color: #333333;
     padding: 1rem;
     border-radius: 5px;
     max-width: 600px;
     margin: auto;
+    
   }
 
   p {
@@ -82,12 +84,13 @@
   }
   
   .project {
+    color: #ebebeb;
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 2rem;
     margin: 1rem 0;
-    background-color: #363636;
+
   }
   
   .hero {
@@ -95,6 +98,39 @@
     transform: translateY(20px);
     animation: fadeInUp 2s ease forwards;
   }
+
+  .partner-wrapper  {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 equal-width columns */
+    gap: 0 80px; /* Space between logos */
+    width: 50%; /* Adjust as needed */
+    max-width: 600px; /* Prevents overly wide grid */
+    margin: 0 auto; /* Centers the grid */
+    padding: 0px; /* Adds some spacing */
+  }
+
+  .partner-logo {
+    max-height: 150px;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .testimonials {
+    height: 100vh;
+  }
+
+.quote  {
+  padding: 2rem;
+}
+
+  .quote-wrapper  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px; /* Adjust spacing as needed */
+  }
+
+
   
   @keyframes fadeInUp {
     to {
@@ -167,7 +203,26 @@
     border-radius: 5px;
   }
 
-  
+.hero-logo  {
+  height: 100vh;
+  display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 2s ease forwards;
+}
+
+.hero-logo-wrapper  {
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+}
+
+.dhd-logo {
+  max-height: 150px;
+
+}
 
 .spacer {
   width: 100%;;
@@ -177,6 +232,7 @@
 .title  {
   align-items: center;
   text-align: center;
+  color: #ebebeb;
 }
   
   .project h2 {
@@ -274,7 +330,7 @@
   
     .project-info {
       width: 45%; /* Adjust width for project info */
-      text-align: left; /* Left align text on larger screens */
+      text-align: left; /* Left align text on larger screens */   
     }
 
     .mobile {
