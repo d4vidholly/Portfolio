@@ -98,9 +98,13 @@
     object-fit: contain;
 }
 
-.info-container::-webkit-scrollbar {
-  display: none; /* Chrome, Safari */
+@media (max-width: 768px) {
+  .scroll-container img {
+      width: 90vw;
+  }
 }
+
+
 
 
 .project-summary  {
@@ -281,6 +285,7 @@
 
 .dhd-logo {
   max-height: 150px;
+  max-width: 50vw;
 
 }
 
