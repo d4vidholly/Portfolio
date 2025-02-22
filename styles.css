@@ -57,7 +57,7 @@
     margin: 20px;
     display: flex;
     justify-content: center; /* Centers items horizontally */
-    gap: 50px; /* Adds spacing between images */
+    gap: 20px; /* Adds spacing between images */
     flex-wrap: wrap; /* Ensures responsiveness on smaller screens */
   }
   
@@ -294,6 +294,7 @@
   text-align: center;
   color: #ebebeb;
   margin: 50px;
+  text-transform: uppercase ;
 }
   
   .project h2 {
