@@ -69,10 +69,15 @@
   .hero-wrapper {
     background-color: #ebebeb;
     color: #333333;
-    padding: 2rem;
+    padding: 1rem;
     max-width: 600px;
     margin: auto;
     
+  }
+
+  .hero-wrapper p {
+    margin: none;
+    padding: none;
   }
 
   .scroll-container {
