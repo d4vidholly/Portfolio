@@ -86,11 +86,17 @@
     margin-bottom: 20px;
 }
 
+
 .scroll-container img {
     max-height: 50vh;
     width: auto;
     object-fit: contain;
 }
+
+.info-container::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
 
 .project-summary  {
   margin-bottom: 100px;
@@ -140,20 +146,18 @@
     grid-template-columns: repeat(2, 1fr); /* Creates 2 equal-width columns */
     gap: 0 80px; /* Space between logos */
     width: 50%; /* Adjust as needed */
-    max-width: 600px; /* Prevents overly wide grid */
+    max-width: 400px; /* Prevents overly wide grid */
     margin: 0 auto; /* Centers the grid */
     padding: 0px; /* Adds some spacing */
+    margin-bottom: 100px;
   }
 
   .partner-logo {
-    max-height: 150px;
+    max-height: 100px;
     align-items: center;
     justify-content: center;
   }
 
-  .testimonials {
-    height: 100vh;
-  }
 
 .quote  {
   padding: 2rem;
@@ -335,6 +339,26 @@
     padding: 1rem;
   }
   
+a {
+  text-decoration: none;
+  color: #ebebeb;
+}
+
+a:visited {
+  text-decoration: none !important;
+}
+
+a:hover {
+  text-decoration: underline !important;
+}
+
+a:active {
+  text-decoration: none;
+}
+
+
+
+
   .social-links a {
     color: #fff;
     margin: 0 1rem;
