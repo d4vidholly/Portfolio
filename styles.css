@@ -157,6 +157,23 @@
     margin-bottom: 100px;
   }
 
+  @media (max-width: 768px) {
+    .partner-wrapper {
+      grid-template-columns: 1fr; /* Single column on smaller screens */
+      gap: 0 40px; /* Reduced space between logos */
+      width: 90%; /* Use more width for smaller screens */
+      max-width: none; /* Remove max-width constraint */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .partner-wrapper {
+      grid-template-columns: repeat(2, 1fr); /* Keep 2 columns */
+      gap: 0 20px; /* Reduced space between logos */
+      width: 90%; /* Use more width for very small screens */
+    }
+  }
+
   .partner-logo {
     max-height: 100px;
     align-items: center;
