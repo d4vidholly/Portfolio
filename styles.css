@@ -84,7 +84,6 @@
     background-color: #333;
     overflow-x: auto;
     white-space: nowrap;
-    padding: 10px;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -318,20 +317,17 @@
   
   .cta {
 
-    color: #f1f1f1;
+    background-color: #333333;
+    color: #ebebeb;
     font-size: larger;
     padding: 1rem 2rem;
     text-decoration: none;
-    border-radius: 30px;
     transition: background-color 0.3s ease;
-    border: solid 2px #f1f1f1;
     font-weight: 600;
   }
   
   .cta:hover {
-    background: linear-gradient(-45deg, #02AAB0, #00CDAC);
-    color: white;
-    border-color: white;
+    color: #ebebeb;
   }
 
   .cta_foot {
@@ -365,6 +361,7 @@
     color: #fff;
     text-align: center;
     padding: 1rem;
+    width: 100vw;
   }
   
 a {
