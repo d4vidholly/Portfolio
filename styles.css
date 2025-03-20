@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: Inter, sans-serif;
+
   }
   
   .lato-regular {
@@ -86,7 +87,6 @@
     white-space: nowrap;
     display: flex;
     align-items: center;
-    gap: 20px;
     margin-bottom: 20px;
 }
 
@@ -96,6 +96,8 @@
     width: auto;
     object-fit: contain;
 }
+
+
 
 @media (max-width: 768px) {
   .scroll-container img {
@@ -134,13 +136,29 @@
     text-align: center;
   }
   
+.rating {
+  display: block;
+  width: 200px;
+}
+
   .project {
     color: #ebebeb;
     justify-content: center;
     align-items: center;
     padding: 2rem;
-    margin: 1rem 0;
+    margin: 1rem;
 
+  }
+
+
+  .testimonials-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Creates 2 equal-width columns */
+    gap: 0 80px; /* Space between logos */
+    width: 50%; /* Adjust as needed */
+    margin: 0 auto; /* Centers the grid */
+    padding: 0px; /* Adds some spacing */
+    margin-bottom: 100px;
   }
   
   .hero {
@@ -267,7 +285,7 @@
   }
 
 .hero-logo  {
-  height: 100vh;
+  height: 80vh;
   display: flex;
     justify-content: center;
     align-items: center;
@@ -361,7 +379,7 @@
     color: #333;
     text-align: center;
     padding: 1rem;
-    width: 100vw;
+    max-width: 100vw;
   }
   
 a {
