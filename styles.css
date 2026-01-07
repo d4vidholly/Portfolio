@@ -15,7 +15,7 @@
   body {
 
     line-height: 1.6;
-    background-color: #333333;
+    background-color: #1d1d1d;
 
   }
 
@@ -29,6 +29,14 @@
     text-align: center;
     height: 100vh;
   }
+
+  .launch {
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
   .quote-three  {
     opacity: 50%;
@@ -81,7 +89,7 @@
   }
 
   .scroll-container {
-    background-color: #333;
+    background-color: #1d1d1d;
     overflow-x: auto;
     white-space: nowrap;
     display: flex;
