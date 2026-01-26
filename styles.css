@@ -280,7 +280,7 @@
 
 .about-text p {
   color: var(--text-muted);
-  text-align: center; /* optional for mobile readability */
+
   margin-bottom: 0.75rem;
 }
 
@@ -296,7 +296,6 @@
 @media (min-width: 768px) {
   .about-content {
     flex-direction: row; /* side by side */
-    align-items: left;
     gap: 3rem;           /* space between text and image */
   }
 
@@ -383,6 +382,10 @@
   .offer-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+
+  .offer-card {
+      margin: 0;
+  }
 }
 
 .logo-grid {
@@ -402,8 +405,10 @@
 .testimonial {
   background: var(--mid-colour);
   padding: 2rem;
-  font-style: italic;
+
   max-width: 600px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+
 }
 
 .section-info {
@@ -445,12 +450,17 @@
 
 .contact-button {
   margin-top: 25px;
+  background-color: var(--dark-colour);
   color: white;
   text-decoration: none;
   border: 1px solid white;
   padding: 0.75rem 1.75rem;
   font-size: 1.4rem;
   display: inline-block;
+}
+
+.contact-button:hover {
+  transform: scale(1.05); /* slightly bigger on hover */
 }
 
 /* Foot text (bottom of footer) */
@@ -477,9 +487,6 @@ a:visited {
   text-decoration: none !important;
 }
 
-a:hover {
-  text-decoration: underline !important;
-}
 
 a:active {
   text-decoration: none;
@@ -490,10 +497,6 @@ a:active {
     margin: 0 1rem;
     text-decoration: none;
     font-size: 1rem;
-  }
-  
-  .social-links a:hover {
-    text-decoration: underline;
   }
 
  
@@ -608,10 +611,7 @@ h2 {
   border: 1px solid white;
 }
 
-.cta:hover  {
-  background-color: #ebebeb;
-  color: #333;
-}
+
 
 
 
@@ -632,16 +632,6 @@ h2 {
 }
 
 
-
-/* Hover effect for dropdown links */
-.dropdown-content a:hover {
-  background-color: #f0f0f0;
-}
-
-/* Show dropdown on hover */
-.dropdown:hover .dropdown-content {
-  display: block;
-}
 
 
 /* Responsive (optional) */
