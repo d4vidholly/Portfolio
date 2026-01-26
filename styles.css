@@ -1,6 +1,6 @@
 :root {
   --light-colour: #eeeeee;
-  --mid-colour: #eeeeee;
+  --mid-colour: #d8d8d8;
   --dark-colour: #1D1D1D;
   --highlight-colour: #d6d6cf;
   --text-dark: #1c1c1c;
@@ -330,7 +330,7 @@
 }
 
 .offer-card {
-  background: var(--mid-colour);
+  background: var(--light-colour);
   padding: 2rem;
   display: flex;
   flex-direction: column;
@@ -350,10 +350,11 @@
 /* Full-width highlight at the bottom */
 .offer-highlight {
   padding: 1rem 2rem;      /* match card padding horizontally */
-
+background-color: var(--mid-colour);
   bottom: 0;
   width: calc(100% + 4rem); /* extend full width including padding */
   margin-left: -2rem;       /* pull it out to align with card edges */
+  margin-bottom: -2rem;
 }
 
 /* List styling */
@@ -403,7 +404,7 @@
 }
 
 .testimonial {
-  background: var(--mid-colour);
+  background: var(--light-colour);
   padding: 2rem;
 
   max-width: 600px;
