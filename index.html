@@ -57,20 +57,23 @@
       </div>
 
       <div class="about-text">
-        <h3>Thoughtful design for small, purpose-led teams</h3>
+        <h3>I help small, purpose-led teams turn complex ideas into clear, considered design.</h3>
         <br>
         <p>
-          I work with small businesses, founders and not-for-profits to create
-          clear, considered design that actually works in the real world.
-        </p>
-        <p>
-          My background spans branding, digital design and systems thinking —
-          helping teams show up with confidence and clarity.
+          Working across digital design, I focus on building systems that are practical, scalable and grounded in real user needs.
         </p>
 
-          <p>
-          - David
-        </p>
+       <div class="connect-wrapper">
+  <a
+    href="https://www.linkedin.com/in/davidhollydesign/"
+    class="in-button"
+    target="_blank"
+    rel="noopener noreferrer"
+  >
+    Connect
+  </a>
+</div>
+
 
         </div>
       </div>
@@ -151,7 +154,7 @@
 
 
 
-<section class="section section-light">
+<section class="section-partners section-light">
   <div class="section-inner">
     <h2 class="section-title">Who I Work With</h2>
 
@@ -184,23 +187,75 @@
 
         <h2 class="section-title">Client Feedback</h2>
 
-    <div class="testimonial">
+    <div class="testimonial-wrapper">
+
+          <button class="testimonial-nav prev" aria-label="Previous testimonial">
+      &lt;
+    </button>
+
+    <div class="testimonial-track">
+
+      <div class="testimonial active">
       
-      <p>
-  “David did an incredible job bringing my brand vision to life. He instantly understood the direction, look, and feel I wanted for my company logo
-  and provided several strong design proposals based on the initial brief.</p>
-  <br><p>
-He worked quickly, efficiently, and collaborated with me every step of the way to refine the concept and create the perfect logo.I highly recommend
-him to anyone looking for a talented and intuitive designer!”
-      </p>
-      <br>
-      <span>Gabrielle Mason</span>
-      <div>Founder, Wayfinder Marketing</div>
-    </div>
+        <p>
+        “David did an incredible job bringing my brand vision to life. He instantly understood the direction, look, and feel I wanted for my company logo
+        and provided several strong design proposals based on the initial brief.</p>
+        <br><p>
+        He worked quickly, efficiently, and collaborated with me every step of the way to refine the concept and create the perfect logo.I highly recommend
+        him to anyone looking for a talented and intuitive designer!”
+        </p>
+        <br>
+        <span>Gabrielle Mason</span>
+        <div>Founder, Wayfinder Marketing</div>
+      </div>
+
+<div class="testimonial">
+      
+        <p>
+        “David has an exceptional understanding of design and how it translates across digital platforms.
+        He evolved our brand identity with care and precision, while also managing multiple website and digital projects seamlessly.
+        <br>
+        <br>
+        His thinking is innovative, practical, and always aligned with the bigger picture.”
+        </p>
+        <br>
+        <span>Dr Martin Nguyen</span>
+        <div>Founder, Medical Pantry</div>
+      </div>
+
+ <div class="testimonial">
+      
+        <p>
+    “David is a valuable addition to the Hidden Heritage project.
+    He has a great eye for detail and is a strong advocate for the user, consistently bringing thoughtful ideas to the table.
+    <br>
+    <br>
+    His content concepts helped shape a feature that has quickly become a favourite with visitors.”
+        </p>
+        <br>
+        <span>Justin Buckley</span>
+        <div>Project Manager, National Trust of Victoria</div>
+      </div>
+      
   </div>
+  
+          <button class="testimonial-nav next" aria-label="Next testimonial">
+      &gt;
+    </button>
+
+  
+    </div>
+
+         <div class="testimonial-dots">
+    <button class="dot active"></button>
+    <button class="dot"></button>
+    <button class="dot"></button>
+  </div>
+  
+
+</div>
+  
 </section>
-
-
 
 
 
@@ -221,4 +276,73 @@ him to anyone looking for a talented and intuitive designer!”
 
 
 </body>
+
+<script>
+  const testimonials = document.querySelectorAll('.testimonial');
+  const dots = document.querySelectorAll('.dot');
+  const prevBtn = document.querySelector('.prev');
+  const nextBtn = document.querySelector('.next');
+
+  let current = 0;
+
+  function updateTestimonial(index) {
+    testimonials.forEach((t, i) => {
+      t.classList.toggle('active', i === index);
+      dots[i].classList.toggle('active', i === index);
+    });
+  }
+
+  nextBtn.addEventListener('click', () => {
+    current = (current + 1) % testimonials.length;
+    updateTestimonial(current);
+  });
+
+  prevBtn.addEventListener('click', () => {
+    current = (current - 1 + testimonials.length) % testimonials.length;
+    updateTestimonial(current);
+  });
+
+  dots.forEach((dot, i) => {
+    dot.addEventListener('click', () => {
+      current = i;
+      updateTestimonial(current);
+    });
+  });
+
+  const track = document.querySelector('.testimonial-track');
+
+  let startX = 0;
+  let endX = 0;
+  const swipeThreshold = 50; // px
+
+  track.addEventListener('touchstart', (e) => {
+    startX = e.touches[0].clientX;
+  });
+
+  track.addEventListener('touchmove', (e) => {
+    endX = e.touches[0].clientX;
+  });
+
+  track.addEventListener('touchend', () => {
+    const diff = startX - endX;
+
+    if (Math.abs(diff) > swipeThreshold) {
+      if (diff > 0) {
+        // swipe left → next
+        current = (current + 1) % testimonials.length;
+      } else {
+        // swipe right → previous
+        current = (current - 1 + testimonials.length) % testimonials.length;
+      }
+      updateTestimonial(current);
+    }
+
+    // reset
+    startX = 0;
+    endX = 0;
+  });
+</script>
+
+
+
 </html>
