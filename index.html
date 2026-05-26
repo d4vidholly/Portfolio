@@ -1,348 +1,1111 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-6RXWW1J69V"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-6RXWW1J69V');
-</script>
-
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>David Holly Design | Freelance Designer in Melbourne</title>
-  <meta name="description" content="David Holly is a Melbourne-based designer with 8+ years of fusing creativity and precision to creative industrial, graphic and web design solutions. Explore his portfolio today.">
-  <link rel="stylesheet" href="styles.css">
+  <title>David Holly Design — Brand · Product · Operations</title>
+  <meta name="description" content="I build the design function for startups that aren't ready for a full-time designer. Brand, product, communications, operations. Melbourne-based, remote worldwide.">
+  <meta property="og:title" content="David Holly Design — Brand · Product · Operations">
+  <meta property="og:description" content="I build the design function for startups that aren't ready for a full-time designer. Brand, product, communications, operations. Melbourne-based, remote worldwide.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.davidhollydesign.com">
+  <meta property="og:image" content="https://www.davidhollydesign.com/assets/social_sharing.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="David Holly Design — Brand · Product · Operations">
+  <meta name="twitter:description" content="I build the design function for startups that aren't ready for a full-time designer. Brand, product, communications, operations. Melbourne-based, remote worldwide.">
+  <meta name="twitter:image" content="https://www.davidhollydesign.com/assets/social_sharing.png">
+  <link rel="canonical" href="https://www.davidhollydesign.com">
+  <link rel="icon" href="./favicon.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "David Holly",
+    "jobTitle": "Fractional Founding Designer",
+    "description": "Industrial designer with 10 years of experience across physical products, digital tools, brand systems, and operational design. Embedded design function for startups that aren't ready for a full-time designer.",
+    "url": "https://www.davidhollydesign.com",
+    "image": "https://www.davidhollydesign.com/assets/social_sharing.png",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Melbourne",
+      "addressCountry": "AU"
+    },
+    "knowsAbout": ["Industrial Design", "Brand Identity", "Product Design", "UX Design", "Operational Design", "Systems Design"],
+    "offers": [
+      {
+        "@type": "Offer",
+        "name": "The Design Review",
+        "description": "Three weeks. A full audit of your design across brand, product, and communications. Prioritised brief and system specification.",
+        "price": "4500",
+        "priceCurrency": "USD"
+      },
+      {
+        "@type": "Offer",
+        "name": "Fractional Founding Designer",
+        "description": "Your design function. Two days a week, remote, rolling monthly. Embedded in the business across brand, product, communications, and operations.",
+        "price": "7500",
+        "priceCurrency": "USD",
+        "priceSpecification": {
+          "@type": "UnitPriceSpecification",
+          "price": "7500",
+          "priceCurrency": "USD",
+          "unitText": "month"
+        }
+      }
+    ],
+    "sameAs": [
+      "https://www.linkedin.com/in/davidhollydesign/"
+    ]
+  }
+  </script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet">
-  
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Karla:ital,wght@0,200..800;1,200..800&family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:ital,wght@0,300;0,400;0,500;1,300&display=swap" rel="stylesheet">
+  <style>
+    /* ── VARIABLES ── */
+    :root {
+      --bg:        #F5F4F0;
+      --bg-alt:    #EDECE8;
+      --bg-dark:   #1A1917;
+      --text:      #1A1917;
+      --muted:     #6B6762;
+      --border:    #D0CCC4;
+      --dim:       #B0ACA6;
+      --note:      #9E9A95;
+      --inverse:   #F5F4F0;
+      --serif:     'Instrument Serif', Georgia, serif;
+      --sans:      'Instrument Sans', system-ui, sans-serif;
+      --max:       1160px;
+      --pad:       clamp(24px, 5vw, 80px);
+    }
 
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
-<link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    /* ── RESET ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: var(--sans);
+      background: var(--bg);
+      color: var(--text);
+      font-size: 17px;
+      line-height: 1.65;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
+    img { display: block; max-width: 100%; }
+    a { color: inherit; text-decoration: none; }
 
+    /* ── LAYOUT ── */
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 var(--pad); }
+    [id] { scroll-margin-top: 68px; }
+
+    /* ── SECTION LABEL ── */
+    .label {
+      font-size: 10px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--note);
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 40px;
+    }
+    .label::after { content: ''; flex: 1; height: 0.5px; background: var(--border); }
+    .label--inv { color: rgba(245,244,240,0.4); }
+    .label--inv::after { background: rgba(245,244,240,0.12); }
+
+    /* ── REVEAL ── */
+    .r  { opacity: 0; transform: translateY(18px); transition: opacity 0.65s ease, transform 0.65s ease; }
+    .r.on { opacity: 1; transform: translateY(0); }
+    .d1 { transition-delay: 0.1s; }
+    .d2 { transition-delay: 0.2s; }
+    .d3 { transition-delay: 0.3s; }
+    .d4 { transition-delay: 0.4s; }
+
+    /* ══════════════════════════════════════
+       NAV
+    ══════════════════════════════════════ */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      background: rgba(245,244,240,0.97);
+      backdrop-filter: blur(14px);
+      border-bottom: 0.5px solid var(--border);
+      transition: box-shadow 0.4s ease;
+    }
+    nav.scrolled { box-shadow: 0 2px 28px rgba(26,25,23,0.07); }
+    .nav-inner {
+      max-width: var(--max); margin: 0 auto; padding: 0 var(--pad);
+      height: 68px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center;
+    }
+    .nav-logo { display: flex; align-items: center; }
+    .nav-logo img { height: 34px; width: auto; display: block; }
+    .nav-links { display: flex; gap: 32px; justify-content: center; }
+    .nav-cta-wrap { display: flex; justify-content: flex-end; }
+    .nav-links a {
+      font-size: 11px; font-weight: 500; letter-spacing: 0.10em;
+      text-transform: uppercase; color: var(--muted);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      font-size: 11px; font-weight: 500; letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: var(--bg-dark); color: var(--inverse);
+      padding: 10px 22px; white-space: nowrap;
+      transition: opacity 0.2s;
+    }
+    .nav-cta:hover { opacity: 0.72; }
+
+    /* ══════════════════════════════════════
+       HERO
+    ══════════════════════════════════════ */
+    .hero {
+      padding: 136px 0 80px;
+      border-bottom: 0.5px solid var(--border);
+    }
+    .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 260px;
+      gap: 64px;
+      align-items: start;
+    }
+    .hero-tag {
+      font-size: 10px; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--note); font-weight: 500; margin-bottom: 24px;
+      display: flex; align-items: center; gap: 12px;
+    }
+    .hero-tag::before { content: ''; width: 20px; height: 0.5px; background: var(--note); }
+    h1.hero-h {
+      font-family: var(--serif);
+      font-size: clamp(34px, 4vw, 54px);
+      line-height: 1.13;
+      font-weight: 400;
+      color: var(--text);
+      margin-bottom: 24px;
+      max-width: 580px;
+    }
+    h1.hero-h em { font-style: italic; color: var(--muted); }
+    .hero-sub {
+      font-size: 16px; color: var(--muted); max-width: 480px;
+      line-height: 1.72; margin-bottom: 14px; font-weight: 300;
+    }
+    .hero-body {
+      font-size: 15px; color: var(--muted); max-width: 460px;
+      line-height: 1.78; margin-bottom: 38px; font-weight: 300;
+    }
+    .cta {
+      display: inline-flex; align-items: center;
+      font-size: 11px; font-weight: 500; letter-spacing: 0.08em;
+      text-transform: uppercase;
+      background: var(--bg-dark); color: var(--inverse);
+      padding: 10px 22px; white-space: nowrap;
+      transition: opacity 0.2s;
+    }
+    .cta:hover { opacity: 0.72; }
+
+    /* Hero annotations */
+    .hero-ann { padding-top: 60px; display: flex; flex-direction: column; gap: 0; }
+    .ann {
+      display: flex; align-items: flex-start; gap: 14px;
+      padding: 20px 0; border-bottom: 0.5px solid var(--border);
+    }
+    .ann:first-child { border-top: 0.5px solid var(--border); }
+    .ann-tick { width: 14px; height: 0.5px; background: var(--dim); margin-top: 12px; flex-shrink: 0; }
+    .ann-num {
+      font-size: 26px; font-weight: 500; color: var(--text);
+      display: block; line-height: 1; margin-bottom: 4px;
+      font-variant-numeric: tabular-nums;
+    }
+    .ann-desc { font-size: 11px; color: var(--note); line-height: 1.5; }
+
+    /* ══════════════════════════════════════
+       WHAT I DO
+    ══════════════════════════════════════ */
+    .wid {
+      background: var(--bg-dark);
+      padding: 80px 0;
+    }
+    .wid-body {
+      font-family: var(--serif);
+      font-size: clamp(21px, 2.4vw, 29px);
+      line-height: 1.55;
+      font-weight: 400;
+      color: var(--inverse);
+      max-width: 820px;
+    }
+    .wid-body p + p { margin-top: 1.1em; }
+    .wid-body em { font-style: italic; color: rgba(245,244,240,0.55); }
+    .wid-credit {
+      display: flex; align-items: center; gap: 18px;
+      margin-top: 52px; padding-top: 36px;
+      border-top: 0.5px solid rgba(245,244,240,0.12);
+    }
+    .wid-credit-photo {
+      width: 52px; height: 52px; object-fit: cover; flex-shrink: 0;
+      border: 0.5px solid rgba(245,244,240,0.15); filter: grayscale(10%);
+    }
+    .wid-credit-name {
+      font-family: var(--serif); font-size: 18px; font-weight: 400;
+      color: var(--inverse); margin-bottom: 4px; line-height: 1;
+    }
+    .wid-credit-role {
+      font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase;
+      color: rgba(245,244,240,0.4); font-weight: 500;
+    }
+
+    /* ══════════════════════════════════════
+       THE DIFFERENCE
+    ══════════════════════════════════════ */
+    .diff {
+      padding: 80px 0;
+      border-bottom: 0.5px solid var(--border);
+      background: var(--bg-alt);
+    }
+    .diff-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1px; background: var(--border); }
+    .diff-col { padding: 36px; background: var(--bg); }
+    .diff-col--dark { background: var(--bg-dark); }
+    .diff-tag {
+      font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase;
+      font-weight: 500; color: var(--note); margin-bottom: 16px;
+    }
+    .diff-col--dark .diff-tag { color: rgba(245,244,240,0.35); }
+    .diff-col h3 {
+      font-family: var(--serif); font-size: 22px; font-weight: 400;
+      color: var(--text); margin-bottom: 16px; line-height: 1.3;
+    }
+    .diff-col--dark h3 { color: var(--inverse); }
+    .diff-col p { font-size: 15px; color: var(--muted); line-height: 1.75; font-weight: 300; }
+    .diff-col--dark p { color: rgba(245,244,240,0.55); }
+
+    /* ══════════════════════════════════════
+       SERVICES
+    ══════════════════════════════════════ */
+    .svcs { padding: 80px 0; border-bottom: 0.5px solid var(--border); }
+    .svcs-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+    .svc {
+      border: 0.5px solid var(--border); padding: 40px 36px 36px;
+      position: relative; display: flex; flex-direction: column;
+    }
+    .svc-type {
+      font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--note); margin-bottom: 16px; font-weight: 500;
+    }
+    .svc-name {
+      font-family: var(--serif); font-size: 26px; font-weight: 400;
+      color: var(--text); line-height: 1.2; margin-bottom: 16px;
+    }
+    .svc-desc {
+      font-size: 14px; color: var(--muted); line-height: 1.75;
+      margin-bottom: 28px; font-weight: 300;
+    }
+    .svc-list { list-style: none; margin-bottom: 28px; flex: 1; }
+    .svc-list li {
+      font-size: 13px; color: var(--muted); padding: 9px 0;
+      border-bottom: 0.5px solid var(--border);
+      display: flex; align-items: center; gap: 10px; font-weight: 300;
+    }
+    .svc-list li::before {
+      content: ''; display: block; width: 4px; height: 4px;
+      border-radius: 50%; background: var(--dim); flex-shrink: 0;
+    }
+    .svc-price { display: flex; align-items: baseline; gap: 8px; }
+    .svc-price-n {
+      font-size: 30px; font-weight: 500; color: var(--text);
+      font-variant-numeric: tabular-nums;
+    }
+    .svc-price-u { font-size: 11px; color: var(--note); letter-spacing: 0.06em; }
+    .svc-for {
+      font-size: 12px; color: var(--note); line-height: 1.65;
+      margin-top: 20px; padding-top: 20px;
+      border-top: 0.5px solid var(--border); font-weight: 300;
+    }
+    .svc-for strong { font-weight: 500; color: var(--muted); }
+    .svcs-grid .svc:last-child { border-left: none; }
+
+    /* ══════════════════════════════════════
+       HOW IT WORKS
+    ══════════════════════════════════════ */
+    .hiw {
+      padding: 80px 0; border-bottom: 0.5px solid var(--border);
+      background: var(--bg-alt);
+    }
+    .hiw-steps {
+      display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 0;
+      border: 0.5px solid var(--border); margin-bottom: 48px;
+    }
+    .hiw-step {
+      padding: 36px 32px;
+      transition: background 0.25s ease;
+    }
+    .hiw-step + .hiw-step { border-left: 0.5px solid var(--border); }
+    .hiw-step:hover { background: var(--bg-dark); }
+    .hiw-step:hover .hiw-n { color: rgba(245,244,240,0.4); }
+    .hiw-step:hover h4 { color: var(--inverse); }
+    .hiw-step:hover p { color: rgba(245,244,240,0.55); }
+    .hiw-n {
+      font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--note); font-weight: 500; margin-bottom: 20px;
+      transition: color 0.25s ease;
+    }
+    .hiw-step h4 {
+      font-family: var(--serif); font-size: 21px; font-weight: 400;
+      color: var(--text); margin-bottom: 12px; line-height: 1.3;
+      transition: color 0.25s ease;
+    }
+    .hiw-step p { font-size: 14px; color: var(--muted); line-height: 1.75; font-weight: 300; transition: color 0.25s ease; }
+    .hiw-cta { text-align: center; }
+
+    /* ══════════════════════════════════════
+       WORK
+    ══════════════════════════════════════ */
+    .work { padding: 80px 0; border-bottom: 0.5px solid var(--border); }
+    .wp-list { border-top: 0.5px solid var(--border); }
+    .wp {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-bottom: 0.5px solid var(--border);
+      min-height: 420px;
+    }
+    .wp-img-wrap {
+      overflow: hidden;
+      border-right: 0.5px solid var(--border);
+    }
+    .wp-img {
+      width: 100%; height: 100%; object-fit: cover; display: block;
+      filter: grayscale(18%);
+      transition: filter 0.55s ease, transform 0.65s ease;
+    }
+    .wp:hover .wp-img { filter: grayscale(0%); transform: scale(1.03); }
+    .wp-body {
+      padding: 48px 56px;
+      display: flex; flex-direction: column; justify-content: flex-start;
+    }
+    .wp-meta { display: flex; align-items: center; gap: 16px; margin-bottom: auto; }
+    .wp-idx {
+      font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--border); font-weight: 500;
+    }
+    .wp-sector {
+      font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--note); font-weight: 500;
+    }
+    .wp-out {
+      font-family: var(--serif);
+      font-size: clamp(22px, 2.6vw, 34px);
+      line-height: 1.22; color: var(--text); font-weight: 400;
+      margin: 32px 0 20px;
+    }
+    .wp-desc {
+      font-size: 14px; color: var(--muted); line-height: 1.75;
+      font-weight: 300; max-width: 42ch;
+    }
+    .wp-client { font-size: 11px; color: var(--dim); letter-spacing: 0.04em; }
+    /* Placeholder card — swap out when project images are ready */
+    .wp-img-placeholder {
+      width: 100%; height: 100%;
+      background: var(--bg-alt);
+      display: flex; align-items: center; justify-content: center;
+      border-right: 0.5px solid var(--border);
+    }
+    .wp-img-placeholder img {
+      width: 120px; opacity: 0.25; filter: grayscale(100%);
+    }
+
+    /* ══════════════════════════════════════
+       TESTIMONIALS
+    ══════════════════════════════════════ */
+    .testi {
+      padding: 80px 0; border-bottom: 0.5px solid var(--border);
+      background: var(--bg-alt);
+    }
+    .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .testi-card {
+      padding: 32px; border: 0.5px solid var(--border); background: var(--bg);
+      display: flex; flex-direction: column;
+    }
+    .testi-mark {
+      font-family: var(--serif); font-size: 52px; line-height: 1;
+      color: var(--border); margin-bottom: 16px; font-weight: 400;
+    }
+    .testi-q {
+      font-size: 14px; color: var(--muted); line-height: 1.78;
+      font-weight: 300; flex: 1; margin-bottom: 24px;
+    }
+    .testi-by { border-top: 0.5px solid var(--border); padding-top: 16px; }
+    .testi-name { font-size: 13px; font-weight: 500; color: var(--text); }
+    .testi-role { font-size: 11px; color: var(--note); margin-top: 3px; }
+
+    /* ══════════════════════════════════════
+       LOGOS
+    ══════════════════════════════════════ */
+    .logos { padding: 44px 0; border-bottom: 0.5px solid var(--border); }
+    .logos-strip {
+      display: flex; align-items: center; justify-content: center;
+      gap: 48px; flex-wrap: wrap;
+    }
+    .logos-strip img {
+      height: 26px; width: auto;
+      filter: grayscale(100%) opacity(45%);
+      transition: filter 0.3s;
+    }
+    .logos-strip img:hover { filter: grayscale(0%) opacity(100%); }
+
+    /* ══════════════════════════════════════
+       ABOUT
+    ══════════════════════════════════════ */
+    .about { padding: 80px 0; border-bottom: 0.5px solid var(--border); }
+    .about-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 64px; align-items: start; }
+    .about-photo-col { position: sticky; top: 80px; }
+    .about-photo {
+      width: 100%; aspect-ratio: 3/4; object-fit: cover;
+      border: 0.5px solid var(--border); filter: grayscale(15%);
+    }
+    .about-photo-cap {
+      font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--note); font-weight: 500; margin-top: 12px;
+    }
+    .about-text p {
+      font-size: 15px; color: var(--muted); line-height: 1.82;
+      font-weight: 300; margin-bottom: 20px;
+    }
+    .about-text p.lead {
+      font-family: var(--serif); font-size: 22px; color: var(--text);
+      line-height: 1.5; font-weight: 400;
+    }
+    .about-stats {
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      border: 0.5px solid var(--border); margin-top: 40px;
+    }
+    .about-stat {
+      padding: 24px; border-right: 0.5px solid var(--border);
+    }
+    .about-stat:last-child { border-right: none; }
+    .about-stat-n {
+      font-size: 34px; font-weight: 500; color: var(--text);
+      display: block; margin-bottom: 5px; font-variant-numeric: tabular-nums;
+    }
+    .about-stat-l { font-size: 11px; color: var(--note); }
+
+    /* ── Tools ── */
+    .tools { margin-top: 40px; border-top: 0.5px solid var(--border); }
+    .tool-row {
+      display: flex; align-items: center; gap: 0;
+      padding: 13px 0; border-bottom: 0.5px solid var(--border);
+    }
+    .tool-cat {
+      font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--note); font-weight: 500; width: 88px; flex-shrink: 0;
+    }
+    .tool-items { display: flex; flex-wrap: wrap; gap: 6px; }
+    .tool-item {
+      display: flex; align-items: center; gap: 5px;
+      font-size: 11px; color: var(--muted); font-weight: 400;
+      border: 0.5px solid var(--border); padding: 4px 8px;
+      line-height: 1;
+    }
+    .tool-item img {
+      width: 12px; height: 12px; display: block;
+      opacity: 0.7;
+    }
+    .tool-mark {
+      width: 12px; height: 12px; display: flex; align-items: center;
+      justify-content: center; font-size: 7px; font-weight: 600;
+      color: var(--muted); letter-spacing: 0; flex-shrink: 0;
+    }
+
+    /* ── Credentials ── */
+    .creds { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
+    .cred {
+      font-size: 10px; letter-spacing: 0.08em; color: var(--note);
+      border: 0.5px solid var(--border); padding: 5px 10px;
+      font-weight: 400;
+    }
+    .cred--award { color: var(--muted); border-color: var(--dim); }
+
+    /* ══════════════════════════════════════
+       CONTACT
+    ══════════════════════════════════════ */
+    .contact { padding: 80px 0; border-bottom: 0.5px solid var(--border); background: var(--bg-alt); }
+    .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 64px; }
+    .contact-h {
+      font-family: var(--serif); font-size: clamp(28px, 3vw, 42px);
+      font-weight: 400; line-height: 1.2; color: var(--text); margin-bottom: 16px;
+    }
+    .contact-body {
+      font-size: 15px; color: var(--muted); line-height: 1.75;
+      font-weight: 300; margin-bottom: 32px;
+    }
+    /* Cal.com placeholder */
+    .cal-block {
+      border: 0.5px solid var(--border); padding: 40px 32px;
+      text-align: center; background: var(--bg);
+    }
+    .cal-tag {
+      font-size: 9px; letter-spacing: 0.14em; text-transform: uppercase;
+      color: var(--note); font-weight: 500; margin-bottom: 16px;
+    }
+    .cal-h {
+      font-family: var(--serif); font-size: 20px; color: var(--text);
+      margin-bottom: 8px;
+    }
+    .cal-desc {
+      font-size: 13px; color: var(--muted); margin-bottom: 28px;
+      font-weight: 300; line-height: 1.65;
+    }
+    .cal-btn {
+      display: inline-flex; align-items: center; gap: 8px;
+      font-size: 11px; font-weight: 500; letter-spacing: 0.1em;
+      text-transform: uppercase; color: var(--inverse);
+      background: var(--text); padding: 13px 28px;
+      transition: opacity 0.2s;
+    }
+    .cal-btn:hover { opacity: 0.75; }
+    /* Form */
+    .form { display: flex; flex-direction: column; gap: 16px; }
+    .fg { display: flex; flex-direction: column; gap: 6px; }
+    .fl {
+      font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--note); font-weight: 500;
+    }
+    .fi, .ft {
+      width: 100%; padding: 12px 14px; border: 0.5px solid var(--border);
+      background: var(--bg); font-family: var(--sans); font-size: 14px;
+      color: var(--text); font-weight: 300; outline: none;
+      border-radius: 0; appearance: none;
+      transition: border-color 0.2s;
+    }
+    .fi:focus, .ft:focus { border-color: var(--text); }
+    .ft { resize: vertical; min-height: 120px; }
+    .fsub {
+      align-self: flex-end; display: inline-flex; align-items: center; gap: 10px;
+      font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--inverse); background: var(--text); padding: 14px 28px;
+      border: none; cursor: pointer; transition: opacity 0.2s;
+    }
+    .fsub:hover { opacity: 0.75; }
+
+    /* ══════════════════════════════════════
+       FOOTER
+    ══════════════════════════════════════ */
+    footer {
+      background: var(--bg-dark); padding: 36px 0;
+    }
+    .footer-in {
+      max-width: var(--max); margin: 0 auto; padding: 0 var(--pad);
+      display: flex; align-items: center; justify-content: space-between;
+      flex-wrap: wrap; gap: 20px;
+    }
+    .footer-logo { display: flex; align-items: center; gap: 12px; }
+    .footer-meta {
+      font-size: 11px; color: rgba(245,244,240,0.4);
+      text-align: right; line-height: 1.9;
+    }
+    .footer-meta a { color: rgba(245,244,240,0.6); transition: color 0.2s; }
+    .footer-meta a:hover { color: var(--inverse); }
+
+    /* ══════════════════════════════════════
+       RESPONSIVE
+    ══════════════════════════════════════ */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      .hero-ann { display: none; }
+      .wp { grid-template-columns: 1fr; min-height: auto; }
+      .wp-img-wrap { border-right: none; border-bottom: 0.5px solid var(--border); aspect-ratio: 16/9; }
+      .wp-body { padding: 32px 28px; }
+      .diff-grid { grid-template-columns: 1fr; gap: 1px; }
+      .svcs-grid { grid-template-columns: 1fr; }
+      .about-grid { grid-template-columns: 1fr; }
+      .about-photo-col { position: static; max-width: 260px; }
+      .contact-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 600px) {
+      .nav-links, .nav-cta { display: none; }
+      .nav-logo img { height: 28px; }
+      .hero { padding-top: 96px; }
+
+      /* ── HIW carousel ── */
+      .hiw-steps {
+        display: flex; overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none;
+        border: 0.5px solid var(--border);
+        margin-bottom: 32px;
+      }
+      .hiw-steps::-webkit-scrollbar { display: none; }
+      .hiw-step {
+        flex: 0 0 84%; scroll-snap-align: start;
+        border-right: 0.5px solid var(--border); border-bottom: none; border-left: none;
+      }
+      .hiw-step:last-child { border-right: none; }
+
+      /* ── Testimonials carousel ── */
+      .testi-grid {
+        display: flex; overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        scrollbar-width: none; gap: 16px;
+      }
+      .testi-grid::-webkit-scrollbar { display: none; }
+      .testi-card { flex: 0 0 84%; scroll-snap-align: start; }
+
+      .about-stats { grid-template-columns: 1fr; }
+      .about-stat { border-right: none; border-bottom: 0.5px solid var(--border); }
+      .about-stat:last-child { border-bottom: none; }
+      .logos-strip { gap: 24px; }
+      .footer-meta { text-align: left; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .r { opacity: 1; transform: none; transition: none; }
+    }
+    .nav-links a.active { color: var(--text); }
+  </style>
+  <noscript><style>.r { opacity: 1 !important; transform: none !important; }</style></noscript>
 </head>
 <body>
 
-  <!-- Hero Section -->
-
-
-
-  <section class="hero-logo">
-
-    <div  class="hero-logo-wrapper">
-
-    <img src="DHDWhLogo.png" alt="David Holly Design" alt="David Holly Design" class="dhd-logo">
-
+<!-- ══ NAV ══ -->
+<nav>
+  <div class="nav-inner">
+    <a href="#" class="nav-logo" aria-label="David Holly Design — home">
+      <img src="./assets/black_logo.png" alt="">
+    </a>
+    <div class="nav-links">
+      <a href="#work">Work</a>
+      <a href="#services">Services</a>
+      <a href="#about">About</a>
+    </div>
+    <div class="nav-cta-wrap">
+      <a href="#contact" class="nav-cta">Book a call</a>
+    </div>
   </div>
+</nav>
 
-  </section>
+<!-- ══ HERO ══ -->
+<section class="hero" id="top">
+  <div class="container">
+    <div class="hero-inner">
 
-  <!-- ABOUT -->
-  <section class="section section-light about">
-    
-    <div class="section-inner">
+      <div class="hero-left">
+        <div class="hero-tag r">Fractional Founding Designer</div>
 
-    <div class="about-content">
-      <div class="about-image">
-        <!-- Replace with your image -->
-        <img src="profile.png" alt="About photo" />
+        <h1 class="hero-h r d2">
+          I build the design function for startups <em>that aren't ready</em> for a full-time designer.
+        </h1>
+
+        <p class="hero-sub r d3">Brand, product, communications, operations. Not separate briefs. One connected system.</p>
+        <p class="hero-body r d3">Most early-stage companies reach a point where design is everywhere and nowhere at once. I come in as your designer, build the function from scratch, and stay until you're ready for a team.</p>
+
+        <a href="#contact" class="cta r d4">Start with a conversation</a>
+      </div>
+
+      <!-- TODO: restore hero-ann when Brand / Product / Ops metrics are confirmed -->
+      <div class="hero-ann r d2" style="display:none">
+        <div class="ann">
+          <div class="ann-tick"></div>
+          <div>
+            <span class="ann-num">66%</span>
+            <span class="ann-desc">Reduction in Manufacture Time</span>
+          </div>
+        </div>
+        <div class="ann">
+          <div class="ann-tick"></div>
+          <div>
+            <span class="ann-num">75%</span>
+            <span class="ann-desc">faster on-site product installation</span>
+          </div>
+        </div>
+        <div class="ann">
+          <div class="ann-tick"></div>
+          <div>
+            <span class="ann-num">100%</span>
+            <span class="ann-desc">client intake</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ WHAT I DO ══ -->
+<section class="wid">
+  <div class="container">
+    <div class="label label--inv r">What I do</div>
+    <div class="wid-body r d1">
+      <p>I qualified as an industrial designer. That means before I touch a screen, I'm already asking how the parts connect: what's the product, how does it communicate, what does the brand say, where does the operation break down, and what needs to be specified for any of this to actually work.</p>
+      <p><em>Most designers own one of those questions. I hold all of them.</em></p>
+      <p>Part of that training is understanding end customers — not just yours, but your clients'. What they respond to. What signals credibility in their world. That shapes the decisions.</p>
+      <p>For startups, that usually means coming in when design is being done by four different people with no shared direction. I leave with a system, a visual language, and a team that knows how to use both.</p>
+    </div>
+    <div class="wid-credit r d2">
+      <img src="./assets/profile.png" alt="David Holly" class="wid-credit-photo">
+      <div>
+        <div class="wid-credit-name">David Holly</div>
+        <div class="wid-credit-role">Fractional Founding Designer</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ THE DIFFERENCE ══ -->
+<section class="diff" style="display:none">
+  <div class="container">
+    <div class="label r">The difference</div>
+    <div class="diff-grid">
+      <div class="diff-col r d1">
+        <div class="diff-tag">Most design support</div>
+        <h3>Specialists who own one part</h3>
+        <p>A brand designer builds your visual identity. A product designer works on your UI. A comms designer produces your marketing materials. Each one does their thing, hands it off, and moves on. When your brand, product, and communications start pulling in different directions — and they will — there's nobody whose job it is to notice.</p>
+      </div>
+      <div class="diff-col diff-col--dark r d2">
+        <div class="diff-tag">A founding designer</div>
+        <h3>One person who holds the whole</h3>
+        <p>Embedded in the business. Accountable to the whole. When a decision on the product screen is inconsistent with what you're telling investors, I'm the person who notices — because I was in both rooms. When a new feature needs to fit the system that's already been built, I know the system. Not a freelancer. Not an agency. Your designer.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SERVICES ══ -->
+<section class="svcs" id="services">
+  <div class="container">
+    <div class="label r">Services</div>
+    <div class="svcs-grid">
+
+      <div class="svc r d1">
+<div class="svc-type">01 · Entry point</div>
+        <h3 class="svc-name">The Design Review</h3>
+        <p class="svc-desc">Three weeks. A full audit of your design across brand, product, and communications. You get a prioritised brief and system specification you can act on immediately, whether that's with me or someone else.</p>
+        <ul class="svc-list">
+          <li>Written audit across all design touchpoints</li>
+          <li>Prioritised list of design problems, critical to nice-to-have</li>
+          <li>System specification: what to build, in what order</li>
+          <li>Honest recommendation on whether ongoing support makes sense</li>
+        </ul>
+        <div class="svc-price">
+          <span class="svc-price-n">$4,500</span>
+          <span class="svc-price-u">AUD · fixed fee</span>
+        </div>
+        <div class="svc-for">
+          <strong>Right for you if:</strong> You know design is a problem but aren't sure where it's costing you most. You want the full picture before committing to ongoing work. You're about to launch, raise, or hire.
+        </div>
+      </div>
+
+      <div class="svc r d2">
+<div class="svc-type">02 · Ongoing</div>
+        <h3 class="svc-name">Fractional Founding Designer</h3>
+        <p class="svc-desc">Your design function. Two days a week, remote, rolling monthly. Embedded in the business: attending your meetings, understanding your product, knowing your users, making the right call week to week without needing to be briefed again.</p>
+        <ul class="svc-list">
+          <li>Brand, product, communications, operations</li>
+          <li>2 days per week · remote</li>
+          <li>Rolling monthly commitment</li>
+          <li>No briefs. No project scopes. No gaps.</li>
+        </ul>
+        <div class="svc-price">
+          <span class="svc-price-n">$7,500</span>
+          <span class="svc-price-u">AUD / month</span>
+        </div>
+        <div class="svc-for">
+          <strong>Right for you if:</strong> You're past launch and design hasn't kept up with the business. No founding designer on the team. Preparing for a raise and everything needs to feel like it comes from the same place.
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ HOW IT WORKS ══ -->
+<section class="hiw">
+  <div class="container">
+    <div class="label r">How it works</div>
+    <div class="hiw-steps">
+      <div class="hiw-step r d1">
+        <div class="hiw-n">Step 01</div>
+        <h4>Start with a conversation</h4>
+        <p>Tell me what you're working on. I'll tell you honestly whether I can help and what that looks like. No pitch. No proposal.</p>
+      </div>
+      <div class="hiw-step r d2">
+        <div class="hiw-n">Step 02</div>
+        <h4>The Design Review</h4>
+        <p>Most clients start here. Three weeks to map the problem and define the system. You get a specification you can act on. With me or not.</p>
+      </div>
+      <div class="hiw-step r d3">
+        <div class="hiw-n">Step 03</div>
+        <h4>Ongoing if it makes sense</h4>
+        <p>Some move to the retainer. Some go straight there. Rolling monthly means you stay in control. Either way, it starts with a conversation.</p>
+      </div>
+    </div>
+    <div class="hiw-cta r">
+      <a href="#contact" class="cta">Book a 30 minute call</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ WORK ══ -->
+<section class="work" id="work">
+  <div class="container">
+    <div class="label r">Work</div>
+  </div>
+  <div style="max-width:var(--max);margin:0 auto;padding:0 var(--pad);">
+    <div class="wp-list">
+
+      <div class="wp r">
+        <div class="wp-img-wrap">
+          <img src="./assets/Wayfinder-One.png" alt="Brand identity project" class="wp-img" loading="lazy">
+        </div>
+        <div class="wp-body">
+          <div class="wp-meta">
+            <span class="wp-idx">01</span>
+            <span class="wp-sector">Brand</span>
+          </div>
+          <p class="wp-out">Brand identity built from zero to launch. Still defining the category.</p>
+          <p class="wp-desc">A marketing consultancy needed a complete visual identity before opening its doors. Brand strategy, logo system, colour, typography, and guidelines. Built to position the founder as a category leader from day one.</p>
+        </div>
+      </div>
+
+      <div class="wp r">
+        <div class="wp-img-wrap">
+          <!-- TODO: replace with project image when ready -->
+          <div class="wp-img-placeholder">
+            <img src="./assets/peppermintotlogo.png" alt="">
+          </div>
+        </div>
+        <div class="wp-body">
+          <div class="wp-meta">
+            <span class="wp-idx">02</span>
+            <span class="wp-sector">Product</span>
+          </div>
+          <p class="wp-out">Full brand identity and website. Designed to run without a designer.</p>
+          <p class="wp-desc">An occupational therapy practice needed a digital presence that could communicate NDIS services to clients, carers, and referrers without losing its human quality. Brand, website, and communications built for independent use.</p>
+        </div>
+      </div>
+
+      <div class="wp r">
+        <div class="wp-img-wrap">
+          <img src="./assets/RML-one.png" alt="Operations and product development project" class="wp-img" loading="lazy">
+        </div>
+        <div class="wp-body">
+          <div class="wp-meta">
+            <span class="wp-idx">03</span>
+            <span class="wp-sector">Operations</span>
+          </div>
+          <p class="wp-out">66% shorter manufacture time. 75% faster installation.</p>
+          <p class="wp-desc">A furniture manufacturer needed a product development process that could scale without adding headcount. Redesigned manufacturing workflows, technical documentation, and specification systems from the ground up.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ TESTIMONIALS ══ -->
+<section class="testi">
+  <div class="container">
+    <div class="label r">What clients say</div>
+    <div class="testi-grid">
+
+      <div class="testi-card r d1">
+        <div class="testi-mark">"</div>
+        <p class="testi-q">David did an incredible job bringing my brand vision to life. He instantly understood the direction, look, and feel I wanted for my company and provided several strong design proposals based on the initial brief. He worked quickly, efficiently, and collaborated with me every step of the way to refine the concept and create the perfect result. I highly recommend him to anyone looking for a talented and intuitive designer.</p>
+        <div class="testi-by">
+          <div class="testi-name">Gabrielle Mason</div>
+          <div class="testi-role">Founder, Wayfinder Marketing</div>
+        </div>
+      </div>
+
+      <div class="testi-card r d2">
+        <div class="testi-mark">"</div>
+        <p class="testi-q">David has an exceptional understanding of design and how it translates across digital platforms. He evolved our brand identity with care and precision, while also managing multiple website and digital projects seamlessly. His thinking is innovative, practical, and always aligned with the bigger picture.</p>
+        <div class="testi-by">
+          <div class="testi-name">Dr Martin Nguyen</div>
+          <div class="testi-role">Founder, Medical Pantry</div>
+        </div>
+      </div>
+
+      <div class="testi-card r d3">
+        <div class="testi-mark">"</div>
+        <p class="testi-q">David is a valuable addition to the Hidden Heritage project. He has a great eye for detail and is a strong advocate for the user, consistently bringing thoughtful ideas to the table. His content concepts helped shape a feature that has quickly become a favourite with visitors.</p>
+        <div class="testi-by">
+          <div class="testi-name">Justin Buckley</div>
+          <div class="testi-role">Project Manager, National Trust of Victoria</div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══ CLIENT LOGOS ══ -->
+<section class="logos">
+  <div class="container">
+    <div class="logos-strip">
+      <img src="./assets/partner-wayf.svg"       alt="Wayfinder Marketing"        height="26">
+      <img src="./assets/partner-medi.svg"       alt="Medical Pantry"             height="26">
+      <img src="./assets/partner-pepp.svg"       alt="Peppermint OT"              height="26">
+      <img src="./assets/partner-roun.svg"       alt="Roundel Manufacturing"      height="26">
+      <img src="./assets/partner-ntav.svg"       alt="National Trust of Victoria" height="26">
+      <img src="./assets/partner_logo_wf.png"    alt="Walker Filtration"          height="26" style="object-fit:contain;">
+    </div>
+  </div>
+</section>
+
+<!-- ══ ABOUT ══ -->
+<section class="about" id="about">
+  <div class="container">
+    <div class="label r">About</div>
+    <div class="about-grid">
+
+      <div class="about-photo-col r">
+        <img src="./assets/profile.png" alt="David Holly" class="about-photo">
+        <div class="about-photo-cap">David Holly · Melbourne, Australia</div>
       </div>
 
       <div class="about-text">
-        <h3>I help small, purpose-led teams turn complex ideas into clear, considered design.</h3>
-        <br>
-        <p>
-          Working across digital design, I focus on building systems that are practical, scalable and grounded in real user needs.
-        </p>
+        <p class="lead r">I'm David Holly, an industrial designer with 10 years of experience across physical products, digital tools, brand systems, and operational design.</p>
+        <p class="r d1">Industrial design teaches you to think in systems: how parts connect, where things fail under load, what needs to be specified for something to actually work at scale. I've applied that discipline to fitted furniture ranges, civic technology platforms, brand identities, healthcare communications, and operational workflows. The approach is the same regardless of the medium. Understand the whole system. Build the parts in the right order. Specify what needs to hold.</p>
+        <p class="r d2">Most designers in the fractional space come from digital backgrounds. What I bring that's harder to find is the operational layer: I've redesigned manufacturing processes, built technical documentation systems, restructured supply chains, and written SOPs that teams actually follow. That background makes the design decisions more durable. I'm thinking about what happens after the file is handed over.</p>
+        <div class="about-stats r d2">
+          <div class="about-stat">
+            <span class="about-stat-n">10+</span>
+            <span class="about-stat-l">Years of experience</span>
+          </div>
+          <div class="about-stat">
+            <span class="about-stat-n">5</span>
+            <span class="about-stat-l">Industries worked across</span>
+          </div>
+          <div class="about-stat">
+            <span class="about-stat-n">2</span>
+            <span class="about-stat-l">Clients optimised</span>
+          </div>
+        </div>
 
-       <div class="connect-wrapper">
-  <a
-    href="https://www.linkedin.com/in/davidhollydesign/"
-    class="in-button"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
-    Connect
-  </a>
-</div>
+        <!-- ── TOOLS ── -->
+        <div class="tools r d3">
 
+          <div class="tool-row">
+            <span class="tool-cat">Design</span>
+            <div class="tool-items">
+              <span class="tool-item"><img src="https://cdn.simpleicons.org/figma/6B6762" alt="">Figma</span>
+              <span class="tool-item"><img src="https://cdn.simpleicons.org/adobeillustrator/6B6762" alt="">Illustrator</span>
+              <span class="tool-item"><img src="https://cdn.simpleicons.org/adobeindesign/6B6762" alt="">InDesign</span>
+              <span class="tool-item"><img src="https://cdn.simpleicons.org/adobephotoshop/6B6762" alt="">Photoshop</span>
+              <span class="tool-item"><img src="https://cdn.simpleicons.org/procreate/6B6762" alt="">Procreate</span>
+            </div>
+          </div>
+
+          <div class="tool-row">
+            <span class="tool-cat">Technical</span>
+            <div class="tool-items">
+              <span class="tool-item"><span class="tool-mark">AC</span>AutoCAD</span>
+              <span class="tool-item"><span class="tool-mark">SW</span>SolidWorks</span>
+              <span class="tool-item"><span class="tool-mark">CV</span>Cabinet Vision</span>
+            </div>
+          </div>
+
+          <div class="tool-row">
+            <span class="tool-cat">Build</span>
+            <div class="tool-items">
+              <span class="tool-item"><img src="https://cdn.simpleicons.org/html5/6B6762" alt="">HTML / CSS</span>
+            </div>
+          </div>
+
+          <div class="tool-row">
+            <span class="tool-cat">AI</span>
+            <div class="tool-items">
+              <span class="tool-item"><img src="https://cdn.simpleicons.org/midjourney/6B6762" alt="">Midjourney</span>
+              <span class="tool-item"><img src="https://cdn.simpleicons.org/anthropic/6B6762" alt="">Claude</span>
+            </div>
+          </div>
 
         </div>
+
+
       </div>
+
     </div>
-  </section>
-
-<section class="section section-light">
-  <div class="section-inner">
-    <h3 class="section-title">Design Services</h3>
-
-           
-
-    <div class="offer-grid">
-<div class="offer-card">
-
-  <h3>1. Branding</h3>
-  <p>
-    Strategic brand concepts that define how your business looks, sounds and shows up.
-  </p>
-
-  <ul class="offer-list">
-    <li>Visual Branding inc. Logo</li>
-    <li>Brand Positioning</li>
-    <li>Colour and Type Systems</li>
-  </ul>
-
-  <div class="offer-highlight">
-    <strong>Great for:</strong> New ventures, early-stage businesses, brands needing clarity before execution
   </div>
-
-</div>
-
-
-      <div class="offer-card">
- 
-        <h3>2. Communications</h3>
-        <p>
-          Clear, well-crafted content for busy business owners who need to stay visible without the overhead.</p>
-          <ul class="offer-list">
-            <li>Social Media Content</li>
-          <li>Email Newsletters</li>
-          <li>Core Brand Messaging</li>
-</ul>
-
-        <div class="offer-highlight">
-          <strong>Great for: </strong>Busy founders, small teams and service-based businesses looking to grow their audience
-        </div>
-      </div>
-
-      <div class="offer-card">
-
-        <h3>3. Web Design</h3>
-        <p>
-          Considered one-page websites designed to establish a strong digital presence.</p>
-          <ul class="offer-list">
-          <li>Landing Page Design</li>
-          <li>Digital Business Checklist</li>
-          <li>Basic SEO</li>
-          </ul>
-
-        <div class="offer-highlight">
-          <strong>Great for: </strong>New businesses, personal brands, service providers needing a professional online presence
-        </div>
-      </div>
-    </div>
-
-    <br>
-
-          <h2 class="section-title">
-    <a href="#contact" class="contact-button">This sounds like me!</a>
-  </h2>
-
-  </div>
-
-  
-  
 </section>
 
-
-
-<section class="section-partners section-light">
-  <div class="section-inner">
-    <h2 class="section-title">Who I Work With</h2>
-
-            <p class="section-info">
-     I work with founders, small teams and purpose-led organisations who want thoughtful design without unnecessary complexity.
-        </p>
-
-    <div class="logo-grid">
-      <div class="logo">
-        <img src="partner-wayf.svg">
-      </div>
-      <div class="logo">
-        <img src="partner-medi.svg">
-      </div>
-      <div class="logo">
-        <img src="partner-pepp.svg">
-      </div>
-      <div class="logo">
-        <img src="partner-roun.svg">
-      </div>
-      <div class="logo">
-        <img src="partner-ntav.svg">
-      </div>
-      <div class="logo"></div>
+<!-- ══ CONTACT ══ -->
+<section class="contact" id="contact">
+  <div class="container">
+    <div class="label r">Get in touch</div>
+    <div class="r">
+      <h2 class="contact-h">Ready to build something that works?</h2>
+      <p class="contact-body">Start with a conversation. Tell me what you're working on. I'll tell you honestly whether I can help and what that looks like.</p>
     </div>
+    <div class="contact-grid">
 
-    </section>
-
-    <section class="section-test section-light">
-
-        <h2 class="section-title">Client Feedback</h2>
-
-    <div class="testimonial-wrapper">
-
-          <button class="testimonial-nav prev" aria-label="Previous testimonial">
-      &lt;
-    </button>
-
-    <div class="testimonial-track">
-
-      <div class="testimonial active">
-      
-        <p>
-        “David did an incredible job bringing my brand vision to life. He instantly understood the direction, look, and feel I wanted for my company logo
-        and provided several strong design proposals based on the initial brief.</p>
-        <br><p>
-        He worked quickly, efficiently, and collaborated with me every step of the way to refine the concept and create the perfect logo.I highly recommend
-        him to anyone looking for a talented and intuitive designer!”
-        </p>
-        <br>
-        <span>Gabrielle Mason</span>
-        <div>Founder, Wayfinder Marketing</div>
+      <!-- CAL.COM PLACEHOLDER ─ replace href with your cal.com username -->
+      <div class="cal-block r d1">
+        <div class="cal-tag">30 minute call</div>
+        <p class="cal-h">Book directly</p>
+        <p class="cal-desc">No pitch. No proposal. An honest conversation about your situation and whether I can help.</p>
+        <a href="https://calendly.com/davidholly" class="cal-btn">Book a call</a>
       </div>
 
-<div class="testimonial">
-      
-        <p>
-        “David has an exceptional understanding of design and how it translates across digital platforms.
-        He evolved our brand identity with care and precision, while also managing multiple website and digital projects seamlessly.
-        <br>
-        <br>
-        His thinking is innovative, practical, and always aligned with the bigger picture.”
-        </p>
-        <br>
-        <span>Dr Martin Nguyen</span>
-        <div>Founder, Medical Pantry</div>
+      <div class="cal-block r d2">
+        <div class="cal-tag">Email</div>
+        <p class="cal-h">Write to me</p>
+        <p class="cal-desc">Tell me what you're working on. I'll come back to you within a day.</p>
+        <a href="mailto:davidhollyux@gmail.com" class="cal-btn">davidhollyux@gmail.com</a>
       </div>
 
- <div class="testimonial">
-      
-        <p>
-    “David is a valuable addition to the Hidden Heritage project.
-    He has a great eye for detail and is a strong advocate for the user, consistently bringing thoughtful ideas to the table.
-    <br>
-    <br>
-    His content concepts helped shape a feature that has quickly become a favourite with visitors.”
-        </p>
-        <br>
-        <span>Justin Buckley</span>
-        <div>Project Manager, National Trust of Victoria</div>
-      </div>
-      
-  </div>
-  
-          <button class="testimonial-nav next" aria-label="Next testimonial">
-      &gt;
-    </button>
-
-  
     </div>
-
-         <div class="testimonial-dots">
-    <button class="dot active"></button>
-    <button class="dot"></button>
-    <button class="dot"></button>
   </div>
-  
-
-</div>
-  
 </section>
 
-
-
-
-  <!-- FOOTER -->
-<footer class="footer">
-
-  <h2 class="section-title">
-    <a href="#contact" class="contact-button">Get in touch</a>
-  </h2>
-
-  <div class="foot-text">
-    <p class="foot">David Holly Design - 2026</p>
-    <p class="foot">ABN: 34590811235</p>
+<!-- ══ FOOTER ══ -->
+<footer>
+  <div class="footer-in">
+    <div class="footer-logo">
+      <img src="./assets/light_logo.png" alt="David Holly Design" height="28" style="display:block;width:auto;opacity:0.9;">
+    </div>
+    <div class="footer-meta">
+      Melbourne, Australia · Remote worldwide<br>
+      ABN: 34 590 811 235 · © David Holly Design 2026<br>
+      <a href="https://www.linkedin.com/in/davidhollydesign/" target="_blank" rel="noopener">LinkedIn ↗</a>
+    </div>
   </div>
-
 </footer>
 
-
-</body>
-
 <script>
-  const testimonials = document.querySelectorAll('.testimonial');
-  const dots = document.querySelectorAll('.dot');
-  const prevBtn = document.querySelector('.prev');
-  const nextBtn = document.querySelector('.next');
+  // Scroll reveal
+  const els = document.querySelectorAll('.r');
+  const io  = new IntersectionObserver(
+    entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('on'); }),
+    { threshold: 0.08, rootMargin: '0px 0px -32px 0px' }
+  );
+  els.forEach(el => io.observe(el));
+  setTimeout(() => {
+    document.querySelectorAll('.hero .r').forEach(el => el.classList.add('on'));
+  }, 80);
 
-  let current = 0;
+  // Nav scroll shadow
+  const navEl = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    navEl.classList.toggle('scrolled', window.scrollY > 40);
+  }, { passive: true });
 
-  function updateTestimonial(index) {
-    testimonials.forEach((t, i) => {
-      t.classList.toggle('active', i === index);
-      dots[i].classList.toggle('active', i === index);
-    });
-  }
-
-  nextBtn.addEventListener('click', () => {
-    current = (current + 1) % testimonials.length;
-    updateTestimonial(current);
-  });
-
-  prevBtn.addEventListener('click', () => {
-    current = (current - 1 + testimonials.length) % testimonials.length;
-    updateTestimonial(current);
-  });
-
-  dots.forEach((dot, i) => {
-    dot.addEventListener('click', () => {
-      current = i;
-      updateTestimonial(current);
-    });
-  });
-
-  const track = document.querySelector('.testimonial-track');
-
-  let startX = 0;
-  let endX = 0;
-  const swipeThreshold = 50; // px
-
-  track.addEventListener('touchstart', (e) => {
-    startX = e.touches[0].clientX;
-  });
-
-  track.addEventListener('touchmove', (e) => {
-    endX = e.touches[0].clientX;
-  });
-
-  track.addEventListener('touchend', () => {
-    const diff = startX - endX;
-
-    if (Math.abs(diff) > swipeThreshold) {
-      if (diff > 0) {
-        // swipe left → next
-        current = (current + 1) % testimonials.length;
-      } else {
-        // swipe right → previous
-        current = (current - 1 + testimonials.length) % testimonials.length;
-      }
-      updateTestimonial(current);
-    }
-
-    // reset
-    startX = 0;
-    endX = 0;
-  });
+  // Active nav link
+  const navAnchors = document.querySelectorAll('.nav-links a');
+  const sections = [...navAnchors].map(a => document.querySelector(a.getAttribute('href')));
+  const navIo = new IntersectionObserver(
+    entries => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          navAnchors.forEach(a => a.classList.remove('active'));
+          const link = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
+          if (link) link.classList.add('active');
+        }
+      });
+    },
+    { rootMargin: '-30% 0px -60% 0px' }
+  );
+  sections.forEach(s => s && navIo.observe(s));
 </script>
 
-
-
+</body>
 </html>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
