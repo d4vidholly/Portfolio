@@ -359,7 +359,7 @@
        WORK
     ══════════════════════════════════════ */
     .work { padding: 80px 0; border-bottom: 0.5px solid var(--border); }
-    .wp-list { border-top: 0.5px solid var(--border); }
+    .wp-list { border-top: 0.5px solid var(--border); display: flex; flex-direction: column; gap: 48px; padding-top: 48px; }
     .wp {
       display: grid;
       grid-template-columns: 1fr 1fr;
@@ -862,10 +862,7 @@
 
       <div class="wp r">
         <div class="wp-img-wrap">
-          <!-- TODO: replace with project image when ready -->
-          <div class="wp-img-placeholder">
-            <img src="./assets/peppermintotlogo.png" alt="">
-          </div>
+          <img src="./assets/peppermintot.png" alt="Peppermint OT brand and website project" class="wp-img" loading="lazy">
         </div>
         <div class="wp-body">
           <div class="wp-meta">
@@ -873,21 +870,21 @@
             <span class="wp-sector">Product</span>
           </div>
           <p class="wp-out">Full brand identity and website. Designed to run without a designer.</p>
-          <p class="wp-desc">An occupational therapy practice needed a digital presence that could communicate NDIS services to clients, carers, and referrers without losing its human quality. Brand, website, and communications built for independent use.</p>
+          <p class="wp-desc">An Occupational Therapy startup needed a digital presence to connect NDIS services to clients, carers, and referrers without losing its human quality. Brand, website, and communications built to scale as the company grows.</p>
         </div>
       </div>
 
       <div class="wp r">
         <div class="wp-img-wrap">
-          <img src="./assets/RML-one.png" alt="Operations and product development project" class="wp-img" loading="lazy">
+          <img src="./assets/operations.png" alt="Operations and product development project" class="wp-img" loading="lazy">
         </div>
         <div class="wp-body">
           <div class="wp-meta">
             <span class="wp-idx">03</span>
             <span class="wp-sector">Operations</span>
           </div>
-          <p class="wp-out">66% shorter manufacture time. 75% faster installation.</p>
-          <p class="wp-desc">A furniture manufacturer needed a product development process that could scale without adding headcount. Redesigned manufacturing workflows, technical documentation, and specification systems from the ground up.</p>
+          <p class="wp-out">New Product Range with 66% shorter manufacture time and 75% faster on site installation.</p>
+          <p class="wp-desc">A joinery manufacturer needed an audit of their current product range. Research and testing led to manufacturing workflows, technical documentation, and specification systems from the ground up.</p>
         </div>
       </div>
 
