@@ -514,6 +514,20 @@
       justify-content: center; font-size: 7px; font-weight: 600;
       color: var(--muted); letter-spacing: 0; flex-shrink: 0;
     }
+    .tool-row-pair {
+      display: grid; grid-template-columns: 1fr 1fr;
+      border-bottom: 0.5px solid var(--border);
+    }
+    .tool-row-pair .tool-row { border-bottom: none; }
+    .tool-row-pair .tool-row + .tool-row {
+      border-left: 0.5px solid var(--border); padding-left: 16px;
+    }
+    @media (max-width: 600px) {
+      .tool-row-pair { grid-template-columns: 1fr; }
+      .tool-row-pair .tool-row { border-bottom: 0.5px solid var(--border); }
+      .tool-row-pair .tool-row:last-child { border-bottom: none; }
+      .tool-row-pair .tool-row + .tool-row { border-left: none; padding-left: 0; }
+    }
 
     /* ── Credentials ── */
     .creds { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 20px; }
@@ -1000,18 +1014,19 @@
             </div>
           </div>
 
-          <div class="tool-row">
-            <span class="tool-cat">Build</span>
-            <div class="tool-items">
-              <span class="tool-item"><img src="https://cdn.simpleicons.org/html5/6B6762" alt="">HTML / CSS</span>
+          <div class="tool-row-pair">
+            <div class="tool-row">
+              <span class="tool-cat">Build</span>
+              <div class="tool-items">
+                <span class="tool-item"><img src="https://cdn.simpleicons.org/html5/6B6762" alt="">HTML / CSS</span>
+              </div>
             </div>
-          </div>
-
-          <div class="tool-row">
-            <span class="tool-cat">AI</span>
-            <div class="tool-items">
-              <span class="tool-item"><img src="https://cdn.simpleicons.org/midjourney/6B6762" alt="">Midjourney</span>
-              <span class="tool-item"><img src="https://cdn.simpleicons.org/anthropic/6B6762" alt="">Claude</span>
+            <div class="tool-row">
+              <span class="tool-cat">AI</span>
+              <div class="tool-items">
+                <span class="tool-item"><img src="https://cdn.simpleicons.org/midjourney/6B6762" alt="">Midjourney</span>
+                <span class="tool-item"><img src="https://cdn.simpleicons.org/anthropic/6B6762" alt="">Claude</span>
+              </div>
             </div>
           </div>
 
@@ -1060,7 +1075,7 @@
       <div class="cal-block r d2">
         <div class="cal-tag">Email</div>
         <p class="cal-h">Write to me</p>
-        <p class="cal-desc">Tell me what you're working on. I'll come back to you within a day.</p>
+        <p class="cal-desc">Tell me what you're working on and I'll let you know how I can help.</p>
         <a href="mailto:hello@davidhollydesign.com" class="cal-btn">Send an email</a>
       </div>
 
